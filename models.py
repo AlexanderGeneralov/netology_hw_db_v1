@@ -29,7 +29,7 @@ class Shop(Base):
     id = sq.Column(sq.Integer, primary_key=True)
     name = sq.Column(sq.String(length=40), unique=True)
 
-    stocks = relationship('Stock', backref='shop')
+    shop_stocks = relationship('Stock', backref='shop')
 
 
 class Stock(Base):
